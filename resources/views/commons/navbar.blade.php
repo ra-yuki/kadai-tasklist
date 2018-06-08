@@ -13,6 +13,8 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>{!! link_to_route('tasks.create', 'Create New') !!}</li>
+                    <li><a>Signup</a></li>
+                    <li><a>Login</a></li>
                 </ul>
             </div>
         </div>
