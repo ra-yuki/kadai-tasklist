@@ -23,6 +23,7 @@
                 </tbody>
             </table>
         @endif
+        {!! $tasks->render() !!}
         
         {!! link_to_route('tasks.create', 'create new task', null, ['class' => 'btn btn-primary']) !!}
     </div>
