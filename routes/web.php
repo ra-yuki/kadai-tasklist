@@ -25,5 +25,8 @@ Route::get('/', function(){
     return view('welcome');    
 }); 
 Route::group(['middleware' => ['auth']], function(){
-    Route::resource('tasks', 'TasksController');
+    Route::resource('tasks', 'TasksController', ['except' => ['edit', 'show', 'update', 'delete']]);
+});
+Route::group(['middleware' => ['auth', 'check-user-auth-on-tasks']], function(){
+    Route::resource('tasks', 'TasksController', ['only' => ['edit', 'show', 'update', 'delete']]);
 });
